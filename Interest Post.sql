@@ -28,7 +28,7 @@ AS
 	UNION ALL
 	SELECT 
 		BranchCode,AcType,CyCode,MainCode,CalcDate,CalcAmount, CalcOnBaln ,TranId
-	FROM IntTranDaily I (NOLOCK)
+	FROM IntTranDetail I (NOLOCK)
 	where BranchCode = '011'
 	and  CalcAmount < 0
 	AND  MainCode = @MainCode
